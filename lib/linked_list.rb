@@ -28,4 +28,16 @@ class LinkedList
     end
     count
   end
+
+  def to_string
+    result =""
+
+    current = @head
+    while current
+      result << current.data.to_s
+      current = current.next_node
+    end
+
+    result
+  end
 end
