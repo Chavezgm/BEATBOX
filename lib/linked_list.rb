@@ -13,8 +13,8 @@ class LinkedList
   def count 
     count = 0
     node = @head 
-    
-    while node 
+
+    while node != nil
       count += 1
       node = node.next_node
     end
