@@ -16,4 +16,10 @@ RSpec.describe Node do
       expect(@node.data).to eq("plop")
     end
   end
+
+  describe '#next_node' do 
+    it 'expects node to be nil' do 
+      expect(@node.next_node).to eq(nil)
+    end
+  end
 end
