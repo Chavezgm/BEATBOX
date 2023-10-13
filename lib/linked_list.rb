@@ -9,4 +9,15 @@ class LinkedList
     @head = node
     # binding.pry
   end
+
+  def count 
+    count = 0
+    node = @head 
+    
+    while node 
+      count += 1
+      node = node.next_node
+    end
+    count
+  end
 end

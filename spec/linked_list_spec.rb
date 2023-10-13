@@ -25,4 +25,11 @@ RSpec.describe LinkedList do
       expect(@list.head.next_node).to eq(nil)
     end
   end
+
+  describe '#count' do 
+    it 'counts nodes' do 
+      @list.append("doop")
+      expect(@list.count).to eq(1)
+    end
+  end
 end
