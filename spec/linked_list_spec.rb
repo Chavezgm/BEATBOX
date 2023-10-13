@@ -34,7 +34,7 @@ RSpec.describe LinkedList do
       expect(@list.head.next_node).to eq(nil)
       
       @list.append("deep")
-      binding.pry
+      # binding.pry
 
     end
   end
