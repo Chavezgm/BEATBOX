@@ -21,7 +21,6 @@ class LinkedList
   def count 
     count = 0
     node = @head 
-
     while node != nil
       count += 1
       node = node.next_node
@@ -30,14 +29,30 @@ class LinkedList
   end
 
   def to_string
-    result =""
-
+    result = [] 
     current = @head
     while current
       result << current.data.to_s
       current = current.next_node
     end
+    result.join(' ')
+  end
 
-    result
+  #prepend adds the node that is passsed to the front which is the head 
+  # similar to the append method but the next node is being assigned 
+  # will pass an argument ()
+  
+  def prepend(data)
+    node = Node.new(data)
+    node.next_node = @head
+    # binding.pry
+    @head = node 
+  end
+  #creates node 
+  #the new node now is pointing at the @head 
+  # @head is now the new node that was created
+  
+  def insert(position, data)
+   
   end
 end
