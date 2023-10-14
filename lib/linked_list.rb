@@ -61,14 +61,15 @@ class LinkedList
       @head = node 
     else 
       current_node = @head 
-      until count_position == position || current_node =! nil
+      until count_position == position || current_node.nil?
         perevious_node = current_node
+        # binding.pry
         current_node = current_node.next_node
+        count_position += 1
       end
-  
-      binding.pry
-
+      
+      
     end
-   
   end
+  #
 end
