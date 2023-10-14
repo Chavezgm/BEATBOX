@@ -36,7 +36,7 @@ class LinkedList
       current = current.next_node
     end
     result.join(' ')
-  end
+  end #concats elements of an array 
 
   #prepend adds the node that is passsed to the front which is the head 
   # similar to the append method but the next node is being assigned 
@@ -53,6 +53,8 @@ class LinkedList
   # @head is now the new node that was created
   
   def insert(position, data)
+    node = Node.new(data)
+    # binding.pry
    
   end
 end
