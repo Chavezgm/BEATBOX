@@ -54,11 +54,21 @@ class LinkedList
   
   def insert(position, data)
     node = Node.new(data)
+    count_position = 0
+    perevious_node = nil
     if position == 0
       node.next_node = @head
       @head = node 
+    else 
+      current_node = @head 
+      until count_position == position || current_node =! nil
+        perevious_node = current_node
+        current_node = current_node.next_node
+      end
+  
+      binding.pry
+
     end
-    # binding.pry
    
   end
 end
