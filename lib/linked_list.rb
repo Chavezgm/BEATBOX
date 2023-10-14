@@ -54,6 +54,10 @@ class LinkedList
   
   def insert(position, data)
     node = Node.new(data)
+    if position == 0
+      node.next_node = @head
+      @head = node 
+    end
     # binding.pry
    
   end
