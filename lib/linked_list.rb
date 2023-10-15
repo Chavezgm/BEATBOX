@@ -86,7 +86,8 @@ class LinkedList
       end
       # binding.pry
      current_node = current_node.next_node
+     count_position += 1
     end
-    result
+    result.join('')
   end
 end
