@@ -70,9 +70,20 @@ class LinkedList
       
       if position = count_position
         perevious_node.next_node = node
-        # binding.pry
         node.next_node = current_node
       end
     end
+  end
+  
+  def find (start_position, elements)
+    result =[]
+    current_node = @head
+    count_position = 0
+
+   while current_node && count_position < start_position + elements
+      
+   end
+   
+    # binding.pry
   end
 end

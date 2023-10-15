@@ -57,10 +57,23 @@ it 'counts & appends beats' do
       @list.prepend("dop")
       expect(@list.to_string).to eq("dop plop suu")
       expect(@list.count).to eq(3)
-
+      
       @list.insert(1, "woo")
       expect(@list.to_string).to eq("dop woo plop suu")
+      
+    end
+  end
+  
+  describe '#find' do 
+    it'can find a certain beat' do 
+      @list.append("deep")
+      @list.append("woo")
+      @list.append("shi")
+      @list.append("shu")
+      @list.append("blop")
 
+      expect(@list.to_string).to eq("deep woo shi shu blop")
+      expect(@list.find(2,1)).to eq("shi")
     end
   end
 end
