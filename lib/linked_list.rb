@@ -68,8 +68,11 @@ class LinkedList
         count_position += 1
       end
       
-      
+      if position = count_position
+        perevious_node.next_node = node
+        # binding.pry
+        node.next_node = current_node
+      end
     end
   end
-  #
 end
