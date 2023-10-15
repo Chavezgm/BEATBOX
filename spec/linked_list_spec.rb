@@ -74,6 +74,10 @@ it 'counts & appends beats' do
 
       expect(@list.to_string).to eq("deep woo shi shu blop")
       expect(@list.find(2,1)).to eq("shi")
+
+      expect(@list.includes?("deep")).to be true
+
+      expect(@list.includes?("dep")).to be false
     end
   end
 end

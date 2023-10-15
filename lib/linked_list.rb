@@ -90,4 +90,13 @@ class LinkedList
     end
     result.join('')
   end
+
+  def includes?(data)
+    current_node = @head
+    if current_node.data == data 
+      true 
+    else 
+      false 
+    end 
+  end
 end
