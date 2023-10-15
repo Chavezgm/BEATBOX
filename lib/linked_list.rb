@@ -81,9 +81,12 @@ class LinkedList
     count_position = 0
 
    while current_node && count_position < start_position + elements
-      
-   end
-   
-    # binding.pry
+      if count_position >= start_position
+        result << current_node.data
+      end
+      # binding.pry
+     current_node = current_node.next_node
+    end
+    result
   end
 end
