@@ -27,6 +27,16 @@ RSpec.describe BeatBox do
       @bb.append("woo hoo shu")
       expect(@bb.count).to eq(6)
     end
+  end
 
+  describe "plays beats" do 
+    it 'plays beats' do 
+      @bb.append("deep doo ditt woo hoo shu")
+      # @bb.append("boom bap bap boom boom bap bap boom bap bap boom boom clap boom boom clap boom boom clap boom boom clap")
+      expect(@bb.count).to eq(6)
+      expect(@bb.list.count).to eq(6)
+      
+      @bb.play
+    end
   end
 end
