@@ -88,7 +88,7 @@ class LinkedList
      current_node = current_node.next_node
      count_position += 1
     end
-    result.join('')
+    result.join(" ")
   end
 
   def includes?(data)
@@ -99,4 +99,14 @@ class LinkedList
       false 
     end 
   end
+
+  def pop
+    if @head == nil
+      nil
+    end
+  
+    remove_data = nil
+  
+  end 
+
 end
