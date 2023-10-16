@@ -109,6 +109,16 @@ class LinkedList
     if @head.next_node == nil 
       remove_data = @head.data 
       @head = nil
+    else 
+      current_node = @head
+      second_last_node = nil
+
+      while current_node.next_node.next_node
+        second_last_node = current_node
+        current_node = current_node.next_node
+      end
+      remove_data = current_node.next_node.next_node
+      second_last_node.next_node = nil
     end
   end 
 
