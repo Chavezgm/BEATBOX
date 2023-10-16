@@ -93,8 +93,21 @@ it 'counts & appends beats' do
       @list.append("blop")
 
       expect(@list.pop).to eq("blop")
-      # expect(@list.pop).to eq("shu")
+      expect(@list.pop).to eq("shu")
       expect(@list.to_string).to eq("deep woo shi")
     end
-  end
+
+    it ' pops more beats' do 
+      @list.append("deep")
+      @list.append("woo")
+      @list.append("shi")
+      @list.append("shu")
+      @list.append("blop")
+
+      expect(@list.pop).to eq("blop")
+      expect(@list.pop).to eq("shu")
+      expect(@list.pop).to eq("shi")
+      expect(@list.to_string).to eq("deep woo")
+    end
+   end
 end

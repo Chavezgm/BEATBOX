@@ -101,28 +101,28 @@ class LinkedList
     end 
     false
   end
-
+  
   def pop
     if @head.nil?
-      nil
+      return nil
     end
   
     remove_data = nil
-    if @head.next_node == nil 
-      remove_data = @head.data 
+    if @head.next_node.nil?
+      remove_data = @head 
       @head = nil
     else 
       current_node = @head
       second_last_node = nil
 
-      while current_node.next_node.next_node
-        second_last_node = current_node
+      while current_node.next_node && current_node.next_node.next_node
         current_node = current_node.next_node
       end
-      remove_data = current_node.next_node.data
-      second_last_node.next_node = nil
+      remove_data = current_node.next_node
+      current_node.next_node = nil
     end
-    remove_data
+    remove_data.data
+    # binding.pry
   end 
 
 end
