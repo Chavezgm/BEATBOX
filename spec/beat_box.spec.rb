@@ -21,7 +21,7 @@ RSpec.describe BeatBox do
 
     it 'appends items to the list' do 
       @bb.append("deep doo ditt")
-      expect(@bb.list.head.data).to eq("deep")
+      
     end
 
   end

@@ -5,7 +5,7 @@ class BeatBox
   end
 
   def append(data)
-    words = data
+    words = data.split
     words.each do |word|
       @list.append(word)
     end
