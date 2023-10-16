@@ -12,4 +12,11 @@ RSpec.describe BeatBox do
       expect(@bb).to be_instance_of(BeatBox)
     end
   end
+
+  describe ' The list' do 
+    it 'has nothing in the list' do 
+      @bb.list
+      expect(@bb.list.head).to be nil
+    end
+  end
 end
