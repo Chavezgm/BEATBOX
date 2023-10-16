@@ -106,7 +106,10 @@ class LinkedList
     end
   
     remove_data = nil
-  
+    if @head.next_node == nil 
+      remove_data = @head.data 
+      @head = nil
+    end
   end 
 
 end
