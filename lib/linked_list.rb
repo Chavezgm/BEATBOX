@@ -93,15 +93,17 @@ class LinkedList
 
   def includes?(data)
     current_node = @head
-    if current_node.data == data 
-      true 
-    else 
-      false 
+    while current_node 
+      if current_node.data == data 
+        return true 
+      end 
+      current_node = current_node.next_node
     end 
+    false
   end
 
   def pop
-    if @head == nil
+    if @head.nil?
       nil
     end
   
@@ -117,9 +119,10 @@ class LinkedList
         second_last_node = current_node
         current_node = current_node.next_node
       end
-      remove_data = current_node.next_node.next_node
+      remove_data = current_node.next_node.data
       second_last_node.next_node = nil
     end
+    remove_data
   end 
 
 end
