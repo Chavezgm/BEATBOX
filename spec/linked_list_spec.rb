@@ -39,6 +39,7 @@ it 'counts & appends beats' do
       
       @list.append("deep")
       expect(@list.head.next_node).to be_a(Node)
+      
       expect(@list.count).to eq(2)
       # binding.pry
       expect(@list.to_string).to eq("doop deep")
